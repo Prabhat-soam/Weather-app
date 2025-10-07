@@ -7,35 +7,42 @@
 
 body {
   min-height: 100vh;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(135deg, #e2e2e2 0%, #c9d6ff 100%);
-  background-image: url("assets/cloud.jpg");
-  position: relative;
+  background-size: cover;
+  background-image: url("assets/black_cloud.jpg");
+  position: absolute;
   overflow: hidden;
 }
 
 /* Cloud background using CSS */
 .cloud {
   position: absolute;
-  background: #fff;
-  border-radius: 50%;
-  opacity: 0.7;
+  /* height: 200px;
+  width: 200px;
+   */
+  opacity: 0.9;
   z-index: 0;
   animation: floatClouds 60s linear infinite;
 }
 
-
+.cloud1 {  top: 5%; left: -250px; animation-duration: 40s; }
+.cloud2 { width: 400px; height: 300px; top: 30%; left: -250px; animation-duration: 120s; opacity: 0.7; }
+.cloud3 { width: 400px; height: auto; top: 60%; left: -200px; animation-duration: 80s;  }
+@keyframes floatClouds {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(120vw); } /* move across screen */
+}
 /* Weather app container */
 .weather-app {
   position: relative;
   z-index: 1;
   max-width: 400px;
   margin: 80px auto;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255, 255, 255, 0.85);
   border-radius: 20px;
-  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
   padding: 32px 24px;
   text-align: center;
 }
